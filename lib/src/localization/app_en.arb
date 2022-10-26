@@ -1,0 +1,6 @@
+{
+  "appTitle": "a1_documentation",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
