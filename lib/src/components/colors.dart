@@ -29,3 +29,18 @@ Map<int, Color> blackPearlMap = {
 };
 
 MaterialColor blackPearl = MaterialColor(0xff001524, blackPearlMap);
+
+Map<int, Color> blanchedAlmondMap = {
+  50: const Color.fromRGBO(255, 236, 209, .1),
+  100: const Color.fromRGBO(255, 236, 209, .2),
+  200: const Color.fromRGBO(255, 236, 209, .3),
+  300: const Color.fromRGBO(255, 236, 209, .4),
+  400: const Color.fromRGBO(255, 236, 209, .5),
+  500: const Color.fromRGBO(255, 236, 209, .6),
+  600: const Color.fromRGBO(255, 236, 209, .7),
+  700: const Color.fromRGBO(255, 236, 209, .8),
+  800: const Color.fromRGBO(255, 236, 209, .9),
+  900: const Color.fromRGBO(255, 236, 209, 1),
+};
+
+MaterialColor blanchedAlmond = MaterialColor(0xffFFECD1, blanchedAlmondMap);

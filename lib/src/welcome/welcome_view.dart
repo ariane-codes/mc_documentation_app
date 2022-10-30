@@ -1,4 +1,6 @@
+import 'package:a1_documentation/src/components/restorapp_button.dart';
 import 'package:a1_documentation/src/components/restorapp_logo.dart';
+import 'package:a1_documentation/src/welcome/welcome_info.dart';
 import 'package:flutter/material.dart';
 
 /// Displays the welcome view shown upon opening
@@ -11,10 +13,21 @@ class WelcomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         body: SafeArea(
       child: Center(
-        child: RestorAppLogo(),
+        child: Column(children: <Widget>[
+          const Padding(
+              padding: EdgeInsets.symmetric(vertical: 30),
+              child: RestorAppLogo(customFontSize: 50)),
+          const Expanded(child: WelcomeInfo()),
+          Padding(
+              padding: const EdgeInsets.symmetric(vertical: 30),
+              child: RestorAppButton(
+                  onPressed: () =>
+                      {Navigator.restorablePushNamed(context, "/listView")},
+                  textToShow: "Begin"))
+        ]),
       ),
     ));
   }

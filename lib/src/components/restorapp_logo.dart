@@ -5,20 +5,25 @@ import 'package:flutter/material.dart';
 /// the application.
 
 class RestorAppLogo extends StatelessWidget {
-  const RestorAppLogo({super.key});
+  const RestorAppLogo({this.customFontSize, super.key});
+
+  final double? customFontSize;
 
   @override
   Widget build(BuildContext context) {
-    return RichText(
-        text: TextSpan(
-            text: "Restor",
-            style: TextStyle(
-                fontFamily: "Rancho",
-                fontSize: 40,
-                color: restorAppColors.primary),
-            children: <TextSpan>[
-          TextSpan(
-              text: "App", style: TextStyle(color: restorAppColors.secondary))
-        ]));
+    return Padding(
+        padding: const EdgeInsets.symmetric(vertical: 5.0),
+        child: RichText(
+            text: TextSpan(
+                text: "Restor",
+                style: TextStyle(
+                    fontFamily: "Rancho",
+                    fontSize: customFontSize ?? 40,
+                    color: restorAppColors.primary),
+                children: <TextSpan>[
+              TextSpan(
+                  text: "App",
+                  style: TextStyle(color: restorAppColors.secondary))
+            ])));
   }
 }
