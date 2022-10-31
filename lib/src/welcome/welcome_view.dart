@@ -18,8 +18,8 @@ class WelcomeView extends StatelessWidget {
       child: Center(
         child: Column(children: <Widget>[
           const Padding(
-              padding: EdgeInsets.symmetric(vertical: 30),
-              child: RestorAppLogo(customFontSize: 50)),
+              padding: EdgeInsets.symmetric(vertical: 60),
+              child: RestorAppLogo(customFontSize: 60)),
           const Expanded(child: WelcomeInfo()),
           Padding(
               padding: const EdgeInsets.symmetric(vertical: 30),
