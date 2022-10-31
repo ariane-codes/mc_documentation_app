@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 /// the application.
 
 class UserPersonaView extends StatefulWidget {
-  UserPersonaView({required this.personaKey, super.key});
+  const UserPersonaView({required this.personaKey, super.key});
   final String personaKey;
   @override
   UserPersonaViewState createState() => UserPersonaViewState();
