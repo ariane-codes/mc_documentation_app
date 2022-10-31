@@ -15,44 +15,44 @@ class UserPersonasGridView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return GridView.count(
+      crossAxisCount: 1,
+      primary: false,
+      crossAxisSpacing: 20,
       padding: const EdgeInsets.all(20),
-      child: GridView.count(
-        crossAxisCount: 1,
-        children: [
-          for (UserPersona user in userPersonas)
-            FractionallySizedBox(
-              heightFactor: 0.8,
-              child: Card(
-                color: restorAppColors.tertiary.withOpacity(0.1),
-                clipBehavior: Clip.hardEdge,
-                child: InkWell(
+      children: [
+        for (UserPersona user in userPersonas)
+          Padding(
+            padding: const EdgeInsets.all(25),
+            child: Card(
+              color: restorAppColors.tertiary.withOpacity(0.1),
+              clipBehavior: Clip.hardEdge,
+              child: InkWell(
                   splashColor: restorAppColors.primary,
                   onTap: () {
                     Navigator.restorablePushNamed(context,
                         "/${user.personalData.firstName.toLowerCase()}");
                   },
-                  child: Center(
-                      child: Column(children: [
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 25),
-                      child: CircleAvatar(
-                        minRadius: 80,
-                        foregroundImage: AssetImage(
-                            'assets/images/${user.personalData.firstName.toLowerCase()}.jpg'),
-                      ),
-                    ),
-                    Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 5),
-                        child: Text(
-                            "${user.personalData.firstName} ${user.personalData.lastName}",
-                            style: nameStyles))
-                  ])),
-                ),
-              ),
-            )
-        ],
-      ),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Expanded(
+                          child: CircleAvatar(
+                            minRadius: 80,
+                            maxRadius: 80,
+                            foregroundImage: AssetImage(
+                                'assets/images/${user.personalData.firstName.toLowerCase()}.jpg'),
+                          ),
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(bottom: 30),
+                            child: Text(
+                                "${user.personalData.firstName} ${user.personalData.lastName}",
+                                style: nameStyles))
+                      ])),
+            ),
+          ),
+      ],
     );
   }
 }

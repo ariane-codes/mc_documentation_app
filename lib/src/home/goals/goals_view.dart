@@ -10,8 +10,7 @@ class GoalsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding:
-            const EdgeInsets.only(top: 35, right: 10, left: 10, bottom: 35),
+        padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 10),
         child: SingleChildScrollView(
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

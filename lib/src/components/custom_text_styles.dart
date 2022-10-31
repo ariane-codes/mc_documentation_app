@@ -13,6 +13,19 @@ class CustomTextStyles {
         fontWeight: customFontWeight ?? FontWeight.normal);
   }
 
+  static TextStyle headerStyle(
+      {double? customFontSize,
+      Color? customColor,
+      FontWeight? customFontWeight,
+      FontStyle? fontStyle}) {
+    return TextStyle(
+        fontFamily: "Inter",
+        fontSize: customFontSize ?? 23,
+        color: customColor ?? restorAppColors.tertiary,
+        fontWeight: customFontWeight ?? FontWeight.w700,
+        fontStyle: fontStyle ?? FontStyle.normal);
+  }
+
   static TextStyle restorAppLogoStyle(
       {double? customFontSize, Color? customColor}) {
     return TextStyle(
@@ -35,11 +48,14 @@ class CustomTextStyles {
   static TextSpan styledTextSpan(text,
       {double? customFontSize,
       Color? customColor,
+      FontWeight? customFontWeight,
       List<InlineSpan>? children}) {
     return TextSpan(
         text: text,
         style: CustomTextStyles.blockTextStyle(
-            customColor: customColor, customFontSize: customFontSize),
+            customColor: customColor,
+            customFontSize: customFontSize,
+            customFontWeight: customFontWeight),
         children: children);
   }
 }
