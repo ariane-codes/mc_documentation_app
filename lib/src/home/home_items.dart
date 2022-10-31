@@ -13,7 +13,7 @@ class HomeItem {
 List<HomeItem> homeItems = [
   const HomeItem(1, "Goals", Icons.lunch_dining_rounded, routeGoals),
   const HomeItem(2, "User personas", Icons.face_retouching_natural_rounded,
-      routeUserPersonas),
+      routePrefixUserPersonas),
   const HomeItem(3, "Sketches", Icons.architecture_rounded, routeSketches),
   const HomeItem(4, "Critique of similar apps", Icons.fact_check_rounded,
       routeSimilarApps),

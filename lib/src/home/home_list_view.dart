@@ -11,11 +11,6 @@ class HomeListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //     title: RestorAppLogo(
-      //   customFontSize: 25,
-      //   customUniformColor: restorAppColors.onPrimary,
-      // )),
       body: Padding(
           padding: const EdgeInsets.only(top: 20),
           child: ListView.builder(

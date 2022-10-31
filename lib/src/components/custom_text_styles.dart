@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 
 class CustomTextStyles {
   static TextStyle blockTextStyle(
-      {double? customFontSize, Color? customColor}) {
+      {double? customFontSize,
+      Color? customColor,
+      FontWeight? customFontWeight}) {
     return TextStyle(
         fontFamily: "Inter",
         fontSize: customFontSize ?? 16,
         color: customColor ?? restorAppColors.secondary,
-        fontWeight: FontWeight.normal);
+        fontWeight: customFontWeight ?? FontWeight.normal);
   }
 
   static TextStyle restorAppLogoStyle(

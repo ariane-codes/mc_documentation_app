@@ -3,7 +3,8 @@ import 'package:a1_documentation/src/home/home_list_view.dart';
 import 'package:a1_documentation/src/home/similar_apps/similar_apps_view.dart';
 import 'package:a1_documentation/src/home/sketches/sketches_view.dart';
 import 'package:a1_documentation/src/home/tech_stack/tech_stack_view.dart';
-import 'package:a1_documentation/src/home/user_personas/user_personas_view.dart';
+import 'package:a1_documentation/src/home/user_personas/user_personas_flow.dart';
+import 'package:a1_documentation/src/home/user_personas/user_personas_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:a1_documentation/src/home/goals/goals_view.dart';
 import 'package:a1_documentation/src/components/restorapp_logo.dart';
@@ -51,8 +52,10 @@ class HomeFlowState extends State<HomeFlow> {
       case routeGoals:
         page = const GoalsView();
         break;
-      case routeUserPersonas:
-        page = const UserPersonasView();
+      case routePrefixUserPersonas:
+        final subRoute =
+            routeSettings.name!.substring(routePrefixUserPersonas.length);
+        page = UserPersonasFlow(userPersonasRoute: subRoute);
         break;
       case routeSketches:
         page = const SketchesView();
