@@ -1,13 +1,10 @@
 import 'package:a1_documentation/src/components/custom_text_styles.dart';
 import 'package:a1_documentation/src/components/header_text.dart';
 import 'package:a1_documentation/src/constants/color_scheme.dart';
-import 'package:a1_documentation/src/components/restorapp_logo.dart';
 import 'package:flutter/material.dart';
 
 class SketchesView extends StatelessWidget {
   const SketchesView({super.key});
-
-  static const routeName = '/goals';
 
   @override
   Widget build(BuildContext context) {

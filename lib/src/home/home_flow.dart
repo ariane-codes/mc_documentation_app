@@ -4,7 +4,6 @@ import 'package:a1_documentation/src/home/similar_apps/similar_apps_view.dart';
 import 'package:a1_documentation/src/home/sketches/sketches_view.dart';
 import 'package:a1_documentation/src/home/tech_stack/tech_stack_view.dart';
 import 'package:a1_documentation/src/home/user_personas/user_personas_flow.dart';
-import 'package:a1_documentation/src/home/user_personas/user_personas_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:a1_documentation/src/home/goals/goals_view.dart';
 import 'package:a1_documentation/src/components/restorapp_logo.dart';

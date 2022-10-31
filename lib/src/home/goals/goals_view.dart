@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 class GoalsView extends StatelessWidget {
   const GoalsView({super.key});
 
-  static const routeName = '/goals';
-
   @override
   Widget build(BuildContext context) {
     return Padding(

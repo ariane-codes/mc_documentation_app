@@ -1,5 +1,4 @@
 import 'package:a1_documentation/src/constants/color_scheme.dart';
-import 'package:a1_documentation/src/components/restorapp_logo.dart';
 import 'package:a1_documentation/src/home/home_items.dart';
 import 'package:flutter/material.dart';
 
