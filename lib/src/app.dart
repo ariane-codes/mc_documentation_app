@@ -1,13 +1,12 @@
-import 'package:a1_documentation/src/components/color_scheme.dart';
+import 'package:a1_documentation/src/constants/color_scheme.dart';
+import 'package:a1_documentation/src/constants/routes.dart';
+import 'package:a1_documentation/src/home/home_flow.dart';
 import 'package:a1_documentation/src/welcome/welcome_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/sample_item_list_view.dart';
 import 'settings/settings_controller.dart';
-import 'settings/settings_view.dart';
 
 /// The Widget that configures your application.
 class MyApp extends StatelessWidget {
@@ -65,23 +64,21 @@ class MyApp extends StatelessWidget {
           // Define a function to handle named routes in order to support
           // Flutter web url navigation and deep linking.
           onGenerateRoute: (RouteSettings routeSettings) {
-            return MaterialPageRoute<void>(
-              settings: routeSettings,
-              builder: (BuildContext context) {
-                switch (routeSettings.name) {
-                  case WelcomeView.routeName:
-                    return const WelcomeView();
-                  case SettingsView.routeName:
-                    return SettingsView(controller: settingsController);
-                  case SampleItemDetailsView.routeName:
-                    return const SampleItemDetailsView();
-
-                  case SampleItemListView.routeName:
-                  default:
-                    return const SampleItemListView();
-                }
-              },
-            );
+            late Widget page;
+            if (routeSettings.name == routeWelcome) {
+              page = const WelcomeView();
+            } else if (routeSettings.name!.startsWith(routePrefixHome)) {
+              final subRoute =
+                  routeSettings.name!.substring(routePrefixHome.length);
+              page = HomeFlow(homePageRoute: subRoute);
+            } else {
+              throw Exception("Unknown route: ${routeSettings.name}");
+            }
+            return MaterialPageRoute<dynamic>(
+                builder: (context) {
+                  return page;
+                },
+                settings: routeSettings);
           },
         );
       },

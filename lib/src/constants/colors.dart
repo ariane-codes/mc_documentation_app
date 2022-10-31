@@ -44,3 +44,18 @@ Map<int, Color> blanchedAlmondMap = {
 };
 
 MaterialColor blanchedAlmond = MaterialColor(0xffFFECD1, blanchedAlmondMap);
+
+Map<int, Color> blueStoneMap = {
+  50: const Color.fromRGBO(29, 97, 109, .1),
+  100: const Color.fromRGBO(29, 97, 109, .2),
+  200: const Color.fromRGBO(29, 97, 109, .3),
+  300: const Color.fromRGBO(29, 97, 109, .4),
+  400: const Color.fromRGBO(29, 97, 109, .5),
+  500: const Color.fromRGBO(29, 97, 109, .6),
+  600: const Color.fromRGBO(29, 97, 109, .7),
+  700: const Color.fromRGBO(29, 97, 109, .8),
+  800: const Color.fromRGBO(29, 97, 109, .9),
+  900: const Color.fromRGBO(29, 97, 109, 1),
+};
+
+MaterialColor blueStone = MaterialColor(0xff15616D, blueStoneMap);

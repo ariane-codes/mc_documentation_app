@@ -1,4 +1,4 @@
-import 'package:a1_documentation/src/components/color_scheme.dart';
+import 'package:a1_documentation/src/constants/color_scheme.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeInfo extends StatelessWidget {

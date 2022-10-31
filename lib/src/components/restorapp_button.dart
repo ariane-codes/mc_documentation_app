@@ -1,4 +1,4 @@
-import 'package:a1_documentation/src/components/colors.dart';
+import 'package:a1_documentation/src/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class RestorAppButton extends StatelessWidget {

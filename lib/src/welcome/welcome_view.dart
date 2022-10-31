@@ -9,8 +9,6 @@ import 'package:flutter/material.dart';
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});
 
-  static const routeName = "/";
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +23,7 @@ class WelcomeView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 30),
               child: RestorAppButton(
                   onPressed: () =>
-                      {Navigator.restorablePushNamed(context, "/listView")},
+                      {Navigator.restorablePushNamed(context, "/home")},
                   textToShow: "Begin"))
         ]),
       ),

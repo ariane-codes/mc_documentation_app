@@ -1,13 +1,15 @@
-import 'package:a1_documentation/src/components/color_scheme.dart';
+import 'package:a1_documentation/src/constants/color_scheme.dart';
 import 'package:flutter/material.dart';
 
 /// Displays the welcome view shown upon opening
 /// the application.
 
 class RestorAppLogo extends StatelessWidget {
-  const RestorAppLogo({this.customFontSize, super.key});
+  const RestorAppLogo(
+      {this.customFontSize, this.customUniformColor, super.key});
 
   final double? customFontSize;
+  final Color? customUniformColor;
 
   @override
   Widget build(BuildContext context) {
@@ -19,11 +21,12 @@ class RestorAppLogo extends StatelessWidget {
                 style: TextStyle(
                     fontFamily: "Rancho",
                     fontSize: customFontSize ?? 40,
-                    color: restorAppColors.primary),
+                    color: customUniformColor ?? restorAppColors.primary),
                 children: <TextSpan>[
               TextSpan(
                   text: "App",
-                  style: TextStyle(color: restorAppColors.secondary))
+                  style: TextStyle(
+                      color: customUniformColor ?? restorAppColors.secondary))
             ])));
   }
 }

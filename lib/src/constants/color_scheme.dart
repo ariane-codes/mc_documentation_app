@@ -1,13 +1,15 @@
-import 'package:a1_documentation/src/components/colors.dart';
+import 'package:a1_documentation/src/constants/colors.dart';
 import 'package:flutter/material.dart';
 
 ThemeData defaultThemeData = ThemeData();
 
 ColorScheme restorAppColors = ColorScheme(
     primary: pueblo,
-    onPrimary: pueblo,
+    onPrimary: blanchedAlmond,
     secondary: blackPearl,
-    onSecondary: blackPearl,
+    onSecondary: blanchedAlmond,
+    tertiary: blueStone,
+    onTertiary: blanchedAlmond,
     brightness: defaultThemeData.colorScheme.brightness,
     error: defaultThemeData.colorScheme.error,
     onError: defaultThemeData.colorScheme.onError,
